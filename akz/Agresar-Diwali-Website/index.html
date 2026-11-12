@@ -1,0 +1,173 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#24121b">
+  <title>Diwali Spin & Play</title>
+  <meta name="description" content="Celebrate Diwali with a festive spin, ten playful challenges, and sweet rewards.">
+  <meta property="og:title" content="Diwali Spin & Play">
+  <meta property="og:description" content="A little celebration, a little competition, and lots of Diwali fun.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="assets/spin-wheel.svg">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/main.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="index.html" aria-label="Diwali Spin and Play home">
+      <img class="brand-logo" src="assets/favicon.svg" alt="">
+      <span><strong>DIWALI SPIN &amp; PLAY</strong><small>LIGHT · LAUGHTER · TOGETHERNESS</small></span>
+    </a>
+    <nav aria-label="Main navigation">
+      <a class="active" href="index.html">Play</a>
+      <a href="instructions.html">Game instructions</a>
+    </nav>
+  </header>
+
+  <canvas id="celebrationCanvas" aria-hidden="true"></canvas>
+  <div id="effectMessage" class="effect-message hidden" aria-live="polite"></div>
+  <main>
+    <section class="welcome-screen" id="welcomeScreen">
+      <div class="welcome-copy">
+        <p class="eyebrow">A SPECIAL EVENING TOGETHER</p>
+        <p class="welcome-kicker">Light up the evening</p>
+        <h1>Happy <em>Diwali</em></h1>
+        <p class="welcome-text">A little fun, a little friendly competition, and memories worth taking home. Let the festivities begin!</p>
+        <button class="button button-primary" id="enterButton">Enter the celebration <span aria-hidden="true">↗</span></button>
+      </div>
+      <div class="welcome-art">
+        <img src="assets/diwali-decor.jpg" alt="Festive Diwali decorations at the celebration venue">
+        <div class="welcome-art-caption">A night of light,<br>laughter &amp; togetherness.</div>
+        <div class="photo-credit">A FESTIVE NIGHT · SPIN &amp; PLAY</div>
+      </div>
+    </section>
+
+    <section class="game-area hidden" id="gameArea">
+      <div class="section-heading">
+        <p class="eyebrow">THE MAIN EVENT</p>
+        <h2>Spin <em>&amp;</em> Play</h2>
+        <p>Choose how you want to play, then give the wheel a spin.</p>
+      </div>
+
+      <div class="mode-panel" id="modePanel">
+        <p class="mode-label">CHOOSE YOUR WHEEL</p>
+        <div class="mode-options">
+          <button class="mode-button selected" id="repeatModeButton" type="button">
+            <span class="mode-number">01</span>
+            <span class="mode-title">Open Play</span>
+            <span class="mode-description">Games can repeat. Recent results are gently de-prioritised to keep the wheel varied.</span>
+          </button>
+          <button class="mode-button" id="roundModeButton" type="button">
+            <span class="mode-number">02</span>
+            <span class="mode-title">No-Repeat Round</span>
+            <span class="mode-description">Every game appears once. A new round unlocks only after all ten games have been selected.</span>
+          </button>
+        </div>
+        <p class="mode-note" id="modeNote">Open Play is selected. Any game can return, but the last two results are avoided when possible.</p>
+      </div>
+
+      <div class="play-layout">
+        <div class="wheel-column">
+          <div class="wheel-stage">
+            <div class="pointer" aria-hidden="true"></div>
+            <div class="wheel-frame">
+              <img id="wheelImage" class="wheel-image" src="assets/spin-wheel.svg" alt="Elegant Diwali game wheel with ten challenges">
+            </div>
+          </div>
+          <button class="button button-primary spin-button" id="spinButton" type="button">Spin the wheel</button>
+          <p class="spin-hint" id="spinHint">The wheel will choose your game.</p>
+          <div class="round-status hidden" id="roundStatus" aria-live="polite"></div>
+        </div>
+
+        <aside class="result-panel" aria-live="polite">
+          <p class="eyebrow">YOUR CHALLENGE</p>
+          <div id="emptyResult" class="empty-result">
+            <span class="result-index">READY WHEN YOU ARE</span>
+            <h3>The next game<br>is waiting.</h3>
+            <p>Spin the wheel to reveal your challenge and its rules.</p>
+          </div>
+          <div id="gameResult" class="hidden">
+            <span class="result-index" id="resultIndex">GAME 01</span>
+            <img class="game-result-image" id="gameImage" src="assets/diwali-decor.jpg" alt="" loading="lazy">
+            <h3 id="gameTitle">Diya Tower</h3>
+            <p id="gameDescription"></p>
+            <a class="text-link" href="instructions.html">See all game instructions <span aria-hidden="true">↗</span></a>
+            <div class="result-actions">
+              <button class="button button-win" id="wonButton" type="button">Won</button>
+              <button class="button button-lose" id="lostButton" type="button">Lost</button>
+            </div>
+          </div>
+          <div id="winnerForm" class="hidden">
+            <label for="winnerName">Winner's name</label>
+            <input id="winnerName" type="text" maxlength="60" placeholder="Enter participant's name" autocomplete="off">
+            <button class="button button-primary button-full" id="saveWinnerButton" type="button">Save result</button>
+            <p class="form-error" id="nameError" role="alert"></p>
+          </div>
+          <div id="rewardPanel" class="reward-panel hidden">
+            <div class="reward-gallery">
+              <img src="https://images.unsplash.com/photo-1601050690597-df0568f70950?auto=format&amp;fit=crop&amp;w=500&amp;q=80" alt="Assorted Indian mithai sweets" loading="lazy">
+              <img src="https://images.unsplash.com/photo-1513883049090-d0b7439799bf?auto=format&amp;fit=crop&amp;w=500&amp;q=80" alt="A wrapped gift for the winner" loading="lazy">
+            </div>
+            <p class="eyebrow">WELL PLAYED</p>
+            <h3>Sweet victory!</h3>
+            <p id="rewardMessage">A little mithai for the winner. Enjoy!</p>
+            <button class="button button-secondary button-full" id="nextTurnButton" type="button">Next participant</button>
+          </div>
+          <div id="lostPanel" class="lost-panel hidden">
+            <p class="eyebrow">THAT WAS A GOOD TRY</p>
+            <h3>Better luck next time.</h3>
+            <p>Your turn is recorded. Keep the smiles coming.</p>
+            <button class="button button-secondary button-full" id="nextAfterLossButton" type="button">Next participant</button>
+          </div>
+        </aside>
+      </div>
+
+      <section class="history-section">
+        <div class="history-heading">
+          <div><p class="eyebrow">THE EVENING SO FAR</p><h2>Recent results</h2></div>
+          <button class="quiet-button" id="resetButton" type="button">Reset session</button>
+        </div>
+        <div class="history-list" id="historyList"><p class="history-empty">No games played yet. The first spin is yours.</p></div>
+      </section>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <span>DIWALI SPIN &amp; PLAY</span>
+    <span>Made for a brighter Diwali evening by ANKIT ITANKAR</span>
+  </footer>
+
+  <div class="intro-overlay" id="introOverlay">
+    <canvas id="introCanvas" aria-hidden="true"></canvas>
+    <div class="intro-content">
+      <img src="assets/favicon.svg" alt="" class="intro-logo">
+      <p class="intro-eyebrow">LET THE FESTIVITIES BEGIN</p>
+      <h2>Happy <em>Diwali!</em></h2>
+      <p>May this evening be filled with light, laughter and beautiful memories.</p>
+      <button class="button button-primary" id="introEnterButton" type="button">Enter the celebration <span aria-hidden="true">↗</span></button>
+      <span class="intro-footnote">A little sparkle before the fun begins</span>
+    </div>
+  </div>
+
+  <div class="dud-overlay hidden" id="dudOverlay" aria-live="assertive">
+    <div class="dud-card">
+      <div class="dud-firecracker"><span class="dud-fuse"></span><span class="dud-smoke"></span></div>
+      <p class="eyebrow">OH NO…</p>
+      <h2>Patakha bhi nahi phoota! 😂</h2>
+      <p>Is baar kismat ne bhi fuse kaat diya. Better luck next time!</p>
+      <button class="button button-secondary button-full" id="dudContinueButton" type="button">Okay, next participant</button>
+    </div>
+  </div>
+
+  <div class="round-modal hidden" id="roundModal" role="dialog" aria-modal="true" aria-labelledby="roundModalTitle">
+    <div class="round-modal-card">
+      <p class="eyebrow">ROUND COMPLETE</p>
+      <h2 id="roundModalTitle">All ten games are done.</h2>
+      <p>Every game has appeared once. When you're ready, begin a fresh round with all ten games back on the wheel.</p>
+      <button class="button button-primary button-full" id="startNextRoundButton" type="button">Start next round</button>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,96 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 800" role="img" aria-labelledby="title description">
+  <title id="title">Diwali Spin and Play wheel</title>
+  <desc id="description">Ten festive game wedges surrounding a golden diya.</desc>
+  <defs>
+    <linearGradient id="gold" x2="0" y2="1">
+      <stop stop-color="#ffe7a4"/>
+      <stop offset=".48" stop-color="#c99445"/>
+      <stop offset="1" stop-color="#f8d987"/>
+    </linearGradient>
+    <radialGradient id="center" cx=".35" cy=".28">
+      <stop stop-color="#71324e"/>
+      <stop offset="1" stop-color="#32152e"/>
+    </radialGradient>
+    <linearGradient id="saffron" x2="0" y2="1">
+      <stop stop-color="#f8a52e"/>
+      <stop offset="1" stop-color="#e75b2d"/>
+    </linearGradient>
+    <linearGradient id="magenta" x2=".8" y2="1">
+      <stop stop-color="#ed438c"/>
+      <stop offset="1" stop-color="#a52676"/>
+    </linearGradient>
+    <linearGradient id="violet" x2="0" y2="1">
+      <stop stop-color="#9a62e8"/>
+      <stop offset="1" stop-color="#5935a7"/>
+    </linearGradient>
+    <linearGradient id="blue" x2=".8" y2="1">
+      <stop stop-color="#39a4ec"/>
+      <stop offset="1" stop-color="#2457bd"/>
+    </linearGradient>
+    <linearGradient id="teal" x2="0" y2="1">
+      <stop stop-color="#31c5b0"/>
+      <stop offset="1" stop-color="#087c80"/>
+    </linearGradient>
+    <linearGradient id="green" x2=".8" y2="1">
+      <stop stop-color="#83bd49"/>
+      <stop offset="1" stop-color="#318453"/>
+    </linearGradient>
+    <linearGradient id="coral" x2="0" y2="1">
+      <stop stop-color="#ff7960"/>
+      <stop offset="1" stop-color="#c83851"/>
+    </linearGradient>
+    <linearGradient id="golden" x2=".8" y2="1">
+      <stop stop-color="#f4c84d"/>
+      <stop offset="1" stop-color="#e77b30"/>
+    </linearGradient>
+    <linearGradient id="pink" x2="0" y2="1">
+      <stop stop-color="#f36aaf"/>
+      <stop offset="1" stop-color="#bd397f"/>
+    </linearGradient>
+    <linearGradient id="aqua" x2=".8" y2="1">
+      <stop stop-color="#5bd0d0"/>
+      <stop offset="1" stop-color="#2788aa"/>
+    </linearGradient>
+    <filter id="shadow" x="-30%" y="-30%" width="160%" height="160%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#1b0c14" flood-opacity=".55"/>
+    </filter>
+  </defs>
+  <circle cx="400" cy="400" r="392" fill="#26151f" stroke="url(#gold)" stroke-width="12"/>
+  <circle cx="400" cy="400" r="385" fill="none" stroke="#fff0c8" stroke-opacity=".72" stroke-width="2" stroke-dasharray="2 24" stroke-linecap="round"/>
+  <g stroke="#f4d184" stroke-opacity=".65" stroke-width="2">
+    <path d="M400 400 287.2 52.9A365 365 0 0 1 512.8 52.9Z" fill="url(#saffron)"/>
+    <path d="M400 400 512.8 52.9A365 365 0 0 1 695.3 185.5Z" fill="url(#magenta)"/>
+    <path d="M400 400 695.3 185.5A365 365 0 0 1 765 400Z" fill="url(#violet)"/>
+    <path d="M400 400 765 400A365 365 0 0 1 695.3 614.5Z" fill="url(#blue)"/>
+    <path d="M400 400 695.3 614.5A365 365 0 0 1 512.8 747.1Z" fill="url(#green)"/>
+    <path d="M400 400 512.8 747.1A365 365 0 0 1 287.2 747.1Z" fill="url(#coral)"/>
+    <path d="M400 400 287.2 747.1A365 365 0 0 1 104.7 614.5Z" fill="url(#pink)"/>
+    <path d="M400 400 104.7 614.5A365 365 0 0 1 35 400Z" fill="url(#teal)"/>
+    <path d="M400 400 35 400A365 365 0 0 1 104.7 185.5Z" fill="url(#golden)"/>
+    <path d="M400 400 104.7 185.5A365 365 0 0 1 287.2 52.9Z" fill="url(#aqua)"/>
+  </g>
+  <circle cx="400" cy="400" r="366" fill="none" stroke="#fff0c8" stroke-opacity=".62" stroke-width="3" stroke-dasharray="4 225" stroke-linecap="round"/>
+  <g fill="#fff3dc" font-family="Georgia,serif" font-size="21" font-weight="bold" text-anchor="middle" filter="url(#shadow)">
+    <text x="400" y="126"><tspan x="400">DUMB</tspan><tspan x="400" dy="25">CHARADES</tspan></text>
+    <text x="553" y="177"><tspan x="553">REPEAT</tspan><tspan x="553" dy="25">AFTER ME</tspan></text>
+    <text x="648" y="308"><tspan x="648">READ</tspan><tspan x="648" dy="25">MY LIPS</tspan></text>
+    <text x="648" y="469"><tspan x="648">WRONG</tspan><tspan x="648" dy="25">ANSWERS</tspan><tspan x="648" dy="25">ONLY</tspan></text>
+    <text x="553" y="602"><tspan x="553">EMOTION</tspan><tspan x="553" dy="25">SWITCH</tspan></text>
+    <text x="400" y="654"><tspan x="400">CHARACTER</tspan><tspan x="400" dy="25">ACTING</tspan></text>
+    <text x="247" y="602"><tspan x="247">BLOW</tspan><tspan x="247" dy="25">CANDLE</tspan></text>
+    <text x="152" y="469"><tspan x="152">FILL WATER</tspan><tspan x="152" dy="25">CUP</tspan></text>
+    <text x="152" y="308"><tspan x="152">ONE-WORD</tspan><tspan x="152" dy="25">STORY</tspan></text>
+    <text x="247" y="177"><tspan x="247">DIYA</tspan><tspan x="247" dy="25">TOWER</tspan></text>
+  </g>
+  <circle cx="400" cy="400" r="121" fill="#21131c" stroke="url(#gold)" stroke-width="12"/>
+  <circle cx="400" cy="400" r="106" fill="url(#center)" stroke="#f1d08a" stroke-opacity=".52" stroke-width="2"/>
+  <circle cx="400" cy="400" r="96" fill="none" stroke="#f8d987" stroke-opacity=".22" stroke-width="1"/>
+  <g transform="translate(400 352)" fill="none" stroke="url(#gold)" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M0-51c-23 27-19 47 0 59 19-12 23-32 0-59Z" fill="#e9a953" stroke-width="3"/>
+    <path d="M-50 13h100c-5 24-23 38-50 38s-45-14-50-38Z" fill="#8f4e3e" stroke-width="4"/>
+    <path d="M-58 13h116" stroke-width="5"/>
+  </g>
+  <text x="400" y="431" fill="#fff0d3" font-family="Georgia,serif" font-size="29" font-weight="bold" text-anchor="middle">SPIN &amp;</text>
+  <text x="400" y="467" fill="#f3cf82" font-family="Georgia,serif" font-size="29" font-weight="bold" text-anchor="middle">PLAY</text>
+  <circle cx="400" cy="400" r="377" fill="none" stroke="#f6d991" stroke-opacity=".8" stroke-width="3"/>
+</svg>
